@@ -1,2 +1,2 @@
-# Blockchain
-Repository to share Blockchain related best practices
+# fabric-network-scripts
+Repository to share config files and scripts to bring up Fabric networks. 
