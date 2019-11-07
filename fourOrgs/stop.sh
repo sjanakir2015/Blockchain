@@ -6,9 +6,9 @@
 #
 export COMPOSE_PROJECT_NAME=fabric
 
-set -ev
-
+set -e
+docker ps -a --format  'table {{.Names}} \t {{.Status}} \t {{.Ports}}'
 docker-compose -f docker-compose.yaml down
-docker container list 
-docker container prune -f 
+docker container prune -f
+docker ps -a --format  'table {{.Names}} \t {{.Status}} \t {{.Ports}}'
 

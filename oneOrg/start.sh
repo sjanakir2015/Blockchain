@@ -13,10 +13,10 @@ set -ev
 # don't rewrite paths for Windows Git Bash users
 export MSYS_NO_PATHCONV=1
 
-docker-compose -f docker-compose.yml down
+docker-compose -f docker-compose.yaml down
 docker container list 
 docker container prune -f 
-docker-compose -f docker-compose.yml up -d orderer.example.com peer0.org1.example.com cli
+docker-compose -f docker-compose.yaml up -d orderer.example.com peer0.org1.example.com cli
 docker container list 
 
 # wait for Hyperledger Fabric to start
